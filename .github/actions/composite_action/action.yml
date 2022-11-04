@@ -18,7 +18,7 @@ runs:
       run: echo "random-number=$(echo $RANDOM)" >> $GITHUB_OUTPUT
       shell: bash
     - name: Display the path
-      run: echo $PATH
-      shell: bash
+      run: echo ${env:PATH}
+      shell: pwsh
     - run: ./.github/actions/composite_action/goodbye.sh
       shell: bash
