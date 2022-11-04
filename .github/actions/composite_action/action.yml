@@ -17,7 +17,8 @@ runs:
     - id: random-number-generator
       run: echo "random-number=$(echo $RANDOM)" >> $GITHUB_OUTPUT
       shell: bash
-    - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
+    - name: Display the path
+      run: echo $PATH
       shell: bash
     - run: ./.github/actions/composite_action/goodbye.sh
       shell: bash
