@@ -1,0 +1,1 @@
+echo "Hello Composite action example"
